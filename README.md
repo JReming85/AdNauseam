@@ -84,3 +84,34 @@ Or, support us with a monthly donation and [become a backer!](https://opencollec
 <a href="https://opencollective.com/adnauseam/backer/27/website" target="_blank"><img src="https://opencollective.com/adnauseam/backer/27/avatar.svg"></a>
 <a href="https://opencollective.com/adnauseam/backer/28/website" target="_blank"><img src="https://opencollective.com/adnauseam/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/adnauseam/backer/29/website" target="_blank"><img src="https://opencollective.com/adnauseam/backer/29/avatar.svg"></a>
+
+<br>
+
+--------
+
+#######################################################################
+
+################# **Disable Chrome's Developer Warning** #########################
+
+#######################################################################
+
+* Hide Chrome's Disable developer mode extensions warning
+
+The warning "Disable developer mode extensions" is displayed in Chrome when you install non Chrome Web Store extensions in the browser.
+This warning is displayed on each start of the browser, and it stays on the screen until you hit one of the available buttons (disable or cancel).
+
+The very first thing you need to do is download the [latest policy templates](https://support.google.com/chrome/a/answer/187202?hl=en) from the Google Support website. The following instructions are for Chrome installations on Windows. Instructions for the other operating systems similar.
+
+The policy file is distributed as a zip archive that you need to extract.
+
+1. Once you have done so, move the file policy_templates\windows\admx\chrome.admx to c:\windows\policydefinitions, and the file policy_templates\windows\admx\(yourlanguage)\chrome.adml to c:\windows\policydefinitions\(yourlanguage)\chrome.adml
+2. Open chrome://extensions in the Chrome web browser afterwards, and locate the extension or extensions that you have installed from a source that is not the Chrome Web Store and click details.
+3. Copy the ID of the first to the clipboard.
+4. Open the Group Policy Editor on Windows: tap on the Windows-key, type gpedit.msc, and hit the Enter-key. The Chrome policies should be loaded automatically.
+5. Go to User Configuration > Administrative Templates > Administrative Templates > Google Chrome > Extensions.
+6. Double-click on the "Configure extension installation whitelist" policy.
+7. Set the policy to enabled.
+8. Click on the show button.
+8. Add the IDs of any non-Chrome Web Store extension to the listing.
+9. Click ok in the end.
+10. Restart the Chrome browser.
